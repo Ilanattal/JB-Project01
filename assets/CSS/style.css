@@ -1,0 +1,190 @@
+/* CSS POUR LA POLICE */
+@font-face {
+    font-family: 'winterMinie'; /* Nom de la police (votre choix) */
+    src: url('/fonts/winter_minie/Winter\ Minie.ttf') format('truetype'); /* Chemin relatif vers le fichier .ttf */
+    font-weight: normal; /* Facultatif : spécifie le poids */
+    font-style: normal;  /* Facultatif : spécifie le style */
+}
+
+/* CSS BODY */
+
+body{
+    background-image: url('/images/tile.jpg'); /* Chemin vers l'image */
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+    background-size:cover; /* L'image couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    margin: 0;
+}
+
+/* CSS TITRE */
+h1{
+    text-align: center;
+    font-family: 'winterMinie', Arial, sans-serif; /* Fallback si la police ne charge pas */
+}
+
+/* CSS FORMULAIRE */
+.form-container {
+    display: flex;
+    justify-content: center; /* Centre le formulaire horizontalement */
+    align-items: center; /* Centre le formulaire verticalement */
+    flex-direction: column;
+    min-height: 200px; /* Assure que la div occupe toute la hauteur visible */
+    max-width: 800px;
+    margin: 0 auto; /* Centre horizontalement sur les écrans plus larges */
+    background-image: url('/images/formbg.jpg'); /* Chemin vers votre image */
+    background-repeat: repeat; /* Répète l'image horizontalement et verticalement */
+    background-size: auto; /* Utilise la taille réelle de l'image */
+    background-position: center; /* Centre l'image de fond */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet visuel */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    margin-bottom: 70px;
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligne les éléments horizontalement au centre */
+    width: 100%; /* Facultatif, ajustez selon vos besoins */
+    max-width: 800px; /* Limite la largeur totale */
+    margin: 0 auto; /* Centre le formulaire dans la page */
+    gap: 15px; /* Ajoute de l'espace entre les éléments */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px; /* Espacement entre les champs de saisie */
+}
+
+#taskForm input {
+    width: 100%; /* Les champs occupent toute la largeur */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Empêche les débordements */
+}
+
+#taskForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007b5e; /* Ajustez la couleur si besoin */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Le bouton occupe toute la largeur */
+}
+
+#taskForm button:hover {
+    background-color: #2e8b57; /* Couleur au survol */
+}
+
+/* CSS POUR LES NOTE DES TACHES  */
+
+.note-task {
+    position: relative; /* Nécessaire pour que la croix soit relative à cette div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 130px; /* Largeur de la div */
+    height: 200px; /* Hauteur de la div */
+    background-image: url('/images/notebg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+    margin: 15px;
+}
+
+.text-task {
+    width: 100%; /* Prend toute la largeur disponible */
+    height: 75%; /* Ajuste la hauteur en pourcentage de la div */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: none; /* Désactive le redimensionnement manuel */
+    box-sizing: border-box;
+    overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+    background-color: rgb(231, 231, 216);
+    margin-top: 13px;
+}
+
+.date-container {
+    margin-top: 0px; /* Ajoute un espace au-dessus */
+    font-size: 14px;
+    color: #333; /* Couleur du texte */
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement translucide */
+    padding: 5px 10px;
+    margin-left: -80px;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.hour-container{
+    margin-top: 5px; /* Ajoute un espace au-dessus */
+    font-size: 14px;
+    color: #333; /* Couleur du texte */
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement translucide */
+    padding: 5px 10px;
+    margin-left: -110px;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.close-icon {
+    position: absolute; /* Positionne l'icône par rapport à .note-task */
+    top: 10px; /* Distance par rapport au haut de la div */
+    right: 10px; /* Distance par rapport à la droite de la div */
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc translucide */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1; /* Garde la croix au-dessus des autres éléments de la div */
+}
+
+.close-icon:hover {
+    background-color: #ff4d4d; /* Fond rouge au survol */
+    color: white; /* Texte blanc au survol */
+}
+
+.task-list {
+    display: flex; /* Les tâches seront alignées en ligne */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    gap: 20px; /* Espace entre les tâches */
+    justify-content: flex-start; /* Aligne les tâches à gauche */
+}
+
+
+/* Animation Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Déplacement initial vers le bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Position finale */
+    }
+}
+
+/* Classe pour l'animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out; /* Animation sur 0.5 seconde */
+}
