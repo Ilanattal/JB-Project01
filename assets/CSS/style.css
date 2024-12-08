@@ -1,7 +1,7 @@
 /* CSS POUR LA POLICE */
 @font-face {
     font-family: 'winterMinie'; /* Nom de la police (votre choix) */
-    src: url('fonts/winter_minie/Winter\ Minie.ttf') format('truetype'); /* Chemin relatif vers le fichier .ttf */
+    src: url('../../fonts/winter_minie/Winter\ Minie.ttf') format('truetype'); /* Chemin relatif vers le fichier .ttf */
     font-weight: normal; /* Facultatif : spécifie le poids */
     font-style: normal;  /* Facultatif : spécifie le style */
 }
@@ -9,7 +9,7 @@
 /* CSS BODY */
 
 body{
-    background-image: url('images/tile.jpg'); /* Chemin vers l'image */
+    background-image: url('../../images/tile.jpg'); /* Chemin vers l'image */
     background-repeat: no-repeat; /* Évite que l'image se répète */
     background-size:cover; /* L'image couvre tout l'écran */
     background-position: center; /* Centre l'image */
@@ -32,7 +32,7 @@ h1{
     min-height: 200px; /* Assure que la div occupe toute la hauteur visible */
     max-width: 800px;
     margin: 0 auto; /* Centre horizontalement sur les écrans plus larges */
-    background-image: url('images/formbg.jpg'); /* Chemin vers votre image */
+    background-image: url('../../images/formbg.jpg'); /* Chemin vers votre image */
     background-repeat: repeat; /* Répète l'image horizontalement et verticalement */
     background-size: auto; /* Utilise la taille réelle de l'image */
     background-position: center; /* Centre l'image de fond */
@@ -93,7 +93,7 @@ h1{
     align-items: center;
     width: 130px; /* Largeur de la div */
     height: 200px; /* Hauteur de la div */
-    background-image: url('images/notebg.png');
+    background-image: url('../../images/notebg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
